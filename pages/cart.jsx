@@ -21,11 +21,13 @@ const Cart = () => {
   const dispatch = useDispatch();
   const amount = cart.total;
   const HOST = process.env.HOSTNAME;
-  const CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
+  const CLIENT_ID =
+    process.env.PAYPAL_CLIENT_ID ||
+    "AUzvQkYFGZguceoffaihkasyx4Fv8va0YOIo2CnMrqBf3vaWIDYheHLE9rxEJDD-kgrK0L_qBUpqbYSu";
 
   const createOrder = async (data) => {
     try {
-      const res = await fetch(`${HOST}/api/orders`, {
+      const res = await fetch(`/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -157,11 +159,15 @@ const Cart = () => {
           </div>
           {open ? (
             <div className={styles.paymentMethods}>
-              <button className={styles.payButton} onClick={()=>setCash(true)}>CASH ON DELIVERY</button>
+              <button
+                className={styles.payButton}
+                onClick={() => setCash(true)}
+              >
+                CASH ON DELIVERY
+              </button>
               <PayPalScriptProvider
                 options={{
-                  "client-id":
-                    {CLIENT_ID},
+                  "client-id": "AUzvQkYFGZguceoffaihkasyx4Fv8va0YOIo2CnMrqBf3vaWIDYheHLE9rxEJDD-kgrK0L_qBUpqbYSu",
                   components: "buttons",
                   currency: "USD",
                   "disable-funding": "credit,card,p24",
@@ -176,11 +182,8 @@ const Cart = () => {
             </button>
           )}
         </div>
-
       </div>
-      {
-        cash && <OrderDetail total={cart.total} createOrder={createOrder}/>
-      }
+      {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
     </div>
   );
 };
