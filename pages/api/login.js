@@ -3,7 +3,9 @@ const handler = (req, res) => {
   const { method } = req;
   if (method === "POST") {
     const { username, password } = req.body;
-   
+    console.log(username, password);
+    console.log(process.env.ADMIN_USERNAME, process.env.ADMIN_PASSWORD);
+    
     if (
       username === process.env.ADMIN_USERNAME &&
       password === process.env.ADMIN_PASSWORD
