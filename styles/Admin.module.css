@@ -1,0 +1,31 @@
+.container{
+    padding: 50px;
+    display: flex;
+}
+.item{
+    flex: 1;
+}
+.table{
+    width: 100%;
+    border-spacing: 20px;
+    text-align: left;
+}
+.button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+.button:hover{
+    background-color: #3e8e41;
+}
+.button:last-child{
+    background-color: #f44336;
+}

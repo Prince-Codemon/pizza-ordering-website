@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(128, 128, 128, 0.52);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+}
+
+.mainAddButton {
+    padding: 10px;
+    margin: 20px;
+    background: #d1411e;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 500px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+}
+.close{
+    width: 30px;
+    height: 30px;
+    background: #d1411e;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+
+}
+.close:hover{
+    background: black;
+    color: white;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.label{
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.input{
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #d1411e;
+
+}
+.input:focus{
+    border-bottom: 1px solid black;
+}
+
+.priceContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+.inputSm{
+    width:25%
+}
+.extra{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.extraItems{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+ 
+}
+.extraItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+   background: rgb(237, 103, 103);
+    margin: 5px auto;
+    border: 1px solid tomato;
+    padding: 2px 10px;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.addButton{
+    padding: 2px 10px;
+;
+    background: #d1411e;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: none !important;
+    outline: none ;
+ 
+}
+.button{
+    padding: 10px;
+    margin: 20px;
+    background: #d1411e;
+    width:100%;
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: none !important;
+        outline: none;
+        font-size: large;
+}
+.button:hover{
+    background: black;
+    color: white;
+}
+.button:disabled{
+    background: gray;
+    color: white;
+    cursor: not-allowed;
+}
+.button:disabled:hover{
+    background: gray;
+    color: white;
+    cursor: not-allowed;
+}
