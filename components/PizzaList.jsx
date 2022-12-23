@@ -12,7 +12,7 @@ const PizzaList = ({pizzaList}) => {
       </p>
       <div className={styles.wrapper}>
         {
-          pizzaList.map((pizza,i) => {
+          pizzaList?.map((pizza,i) => {
             return <PizzaCard key={i} pizza={pizza}/>
           }
           )
